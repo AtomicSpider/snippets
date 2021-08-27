@@ -7,3 +7,8 @@ FROM
 WHERE
 	pg_stat_activity.datname = 'database_name'
 	AND pid <> pg_backend_pid();
+
+
+## Get nested json example 
+
+select id, config -> 'submissionList' -> json_object_keys(config -> 'submissionList') -> 'workbench_args' -> 'user_id' as uid, config -> 'submissionList' -> json_object_keys(config -> 'submissionList') -> 'workbench_args' -> 'project_id' as pid, config -> 'submissionList' -> json_object_keys(config -> 'submissionList') -> 'display_name' as toolbox from workflow where id = ANY(ARRAY[2538,2273,2267,2255,2243,1899,1894,1885,1876,1861,1857]);
