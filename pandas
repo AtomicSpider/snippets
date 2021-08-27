@@ -1,0 +1,2 @@
+# Plot Data
+df.plot(kind = 'line', x = 'time', y = 'Close', color = 'blue')
