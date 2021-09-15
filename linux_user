@@ -1,0 +1,10 @@
+#SRC: https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/
+
+# Change sudo password
+su root
+passwd
+
+# Add user 
+sudo useradd username
+sudo useradd -m username (also creates dir)
+sudo passwd username
