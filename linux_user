@@ -1,10 +1,15 @@
 #SRC: https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/
 
 # Change sudo password
-su root
-passwd
+> set a password for root user in a single go:
+sudo passwd root
+> Test it your root password by typing the following command:
+su -
 
 # Add user 
-sudo useradd username
-sudo useradd -m username (also creates dir)
-sudo passwd username
+sudo useradd flutura
+sudo useradd -m flutura (also creates dir)
+sudo passwd flutura
+
+# Switch User
+su flutura
