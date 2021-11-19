@@ -1,0 +1,25 @@
+# Uninstall Docker
+sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
+                  
+sudo yum remove docker-ce docker-ce-cli containerd.io
+
+sudo rm -rf /var/lib/docker
+sudo rm -rf /var/lib/containerd
+
+# Install Docker
+https://hub.docker.com/search?q=&type=edition&offering=community&operating_system=linux
+
+
+# Post Install
+https://docs.docker.com/engine/install/linux-postinstall/
+
+# Access to non root users
+sudo groupadd docker
+sudo usermod -aG docker $USER
