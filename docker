@@ -21,5 +21,41 @@ https://hub.docker.com/search?q=&type=edition&offering=community&operating_syste
 https://docs.docker.com/engine/install/linux-postinstall/
 
 # Access to non root users
+groups   ## prints a list of all groups the currently logged in user belongs to
+groups <user> ## prints a list of all groups the user belongs to
+id <user> ## info about the user
+id -n <user> ## info about the user (only name)
+getent group <group>  ## list all group members
+less /etc/group  ## list all groups
+getent group  ## list all groups
+
 sudo groupadd docker
 sudo usermod -aG docker $USER
+
+# Install Docker Compose
+https://docs.docker.com/compose/install/
+
+# CMDs
+docker version
+docker info
+docker login -u atomicspider -p <pass>
+
+# Docker Container
+docker container run --publish 2000:80 nginx # 80:container 2000:host
+# use --detach/-d to run in background and get container id
+# use --name to name container
+# use --env/-e PASS=passwd tp pass env variables
+docker container ls
+docker container ls -a        ## List all containers
+docker container stop <container_id>
+docker container logs <container_id>
+docker container top <container_id>
+docker container inspect <container_id>
+docker container stats <container_id>
+docker container rm <c_id> <c_id>     ## use -f to force stop running containers
+docker container stop <c_id> <c_id>
+
+docker container exec <container_id>    # executes another comand inside container
+# use -it with run or exec to get interactive shell
+
+docker container start -ai <container_id>   # runs stopped container interactively 
