@@ -1,0 +1,7 @@
+dupe: Find files and folders with the same filename.
+attribdupe: Find files and folders with the same attributes. Sort by attributes for the best results.
+dadupe: Find files and folders with the same date accessed. Sort by date accessed for the best results.
+dcdupe: Find files and folders with the same date created. Sort by date created for the best results.
+dmdupe: Find files and folders with the same date modified. Sort by date modified for the best results.
+namepartdupe: Find files and folders with the same name part (excluding extension).
+sizedupe: Find files and folders with the same size. Sort by size for the best results.
