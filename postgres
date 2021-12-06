@@ -1,3 +1,16 @@
+## PSQL
+
+help > help
+\h for help with SQL commands
+\? for help with psql commands
+\g or terminate with semicolon to execute query
+\q to quit
+
+\l > list databases
+
+
+
+
 ## Kill all database connections
 
 SELECT
