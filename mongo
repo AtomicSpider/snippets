@@ -1,0 +1,2 @@
+# Find largest document id and size
+db.collection.find().toArray().map(function(request) { return {size:Object.bsonsize(request), _id:request._id}; }).sort(function(a, b) { return a.size-b.size; }).pop();
