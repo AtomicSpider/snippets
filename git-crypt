@@ -1,0 +1,14 @@
+>> brew install git-crypt
+
+git init
+git-crypt init. ## generates internal key
+git-crypt export-key ../encryption-key  ## exports key
+
+git add .
+git commit 
+git-crypt status
+
+git push origin master
+
+## In case, the repo is pulled
+git-crypt unlock path-to-key
