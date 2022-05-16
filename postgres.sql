@@ -1,3 +1,6 @@
+SELECT datname, numbackends FROM pg_stat_database WHERE datname is not null;
+
+
 -- Data Types
 https://www.postgresql.org/docs/14/datatype.html
 
